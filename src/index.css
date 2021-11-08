@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*, body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   background: rgb(174,90,126);
+   background: linear-gradient(90deg, rgba(174,90,126,1) 0%, rgba(80,121,170,1) 100%);
+   height: 100vh;
+}
+
+.container {
+   max-width: 1030px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.header {
+   width: 100%;
+   text-align: center;
+   padding-top: 50px;
+   margin-bottom: 30px;
+}
+
+.form {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+.textarea {
+   font-family: 'Open Sans', sans-serif;
+   padding: 10px;
+   width: 50%;
+   font-size: 16px;
+   border: 2px solid rgb(115, 0, 168);
+   border-radius: 15px 0 15px 15px;
+   resize: none;
+   outline: none;
+}
+
+.addBtn {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
+   color: #fff;
+   border-radius: 0 15px 15px 0;
+   border: 2px solid rgb(115, 0, 168);
+   border-left: none;
+   height: 30px;
+   padding: 0 10px;
+   cursor: pointer;
+   background-color: #00DBDE;
+   background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.toDoListItem {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+}
+.toDoItem {
+   display: flex;
+   align-items: center;
+}
+.editToDo {
+   display: inline-block;
+   color: green;
+   font-size: 24px;
+   cursor: pointer;
+}
+.deleteToDo {
+   display: inline-block;
+   margin-left: 5px;
+   font-size: 28px;
+   color: red;
+   cursor: pointer;
+}
+.listItem {
+   width: 30%;
+   height: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   border: 2px solid rgb(115, 0, 168);
+   background-color: #fff;
+   color: black;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   border-radius: 15px;
+   font-size: 18px;
+}
+.listItem:last-child {
+   margin-right: 0;
+}
+.listItem.complete {
+   opacity: 0.3;
+}
+.item-text {
+   width: 80%;
+   height: 100%;
+   cursor: pointer;
+   white-space: pre-wrap;
+   white-space: -moz-pre-wrap;
+   white-space: -pre-wrap;
+   white-space: -o-pre-wrap;
+   word-wrap: break-word;
+}
+.item-text.complete {
+   text-decoration: line-through;
+}
+.item-text span {
+   display: block;
+   font-size: 10px;
+}
+.item-text span:first-child {
+   margin-top: 10px;
 }
